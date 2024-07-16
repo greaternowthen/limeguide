@@ -35,7 +35,7 @@
                     {% elif mode == "novices" %}<small><strong>[{% trans "novices" %}]</strong></small>
                     {% elif mode == "following" %}<small><strong>[{% trans "activity" %}]</strong></small>
                     {% elif mode == "recent" %}<small><strong>[{% trans "followups" %}]</strong></small>
-                    {% elif mode == "acquaintances" %}<small><strong>[{% trans "acquaintances" %}]</strong></small>
+                    {% elif mode == "acquaintances" %}<small><strong>[{% trans "fave authors" %}]</strong></small>
                     {% elif mode == "answered" %}<small><strong>[{% trans "with replies" %}]</strong></small>
                     {% elif mode == "images" %}<small><strong>[{% trans "images" %}]</strong></small>{% endif %}
                 </div>
@@ -109,7 +109,7 @@
                                     <svg fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                         <use href="#people"></use>
                                     </svg>
-                                    {% trans "acquaintances" %}
+                                    {% trans "fave authors" %}
                                 </a>
                             {% endif %}
 

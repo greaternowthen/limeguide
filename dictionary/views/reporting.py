@@ -45,23 +45,24 @@ class GeneralReportView(CreateView):
         key = instance.key
         link = f"{settings.PROTOCOL}://{settings.DOMAIN}{reverse('verify-report', kwargs={'key': key})}"
 
-        message = _(
-            "in order reporting form to reach us, you need to follow the link given below."
-            " if you are in mindset such as 'what the hell? i did not send such report', you"
-            " can continue with your life as if nothing ever happened. the link:"
+        message = _(            
+            "Hi there,<br><br>"
+            "In order for us to receive your epic message, please follow the link below to confirm it was indeed you.<br>"
+            "If you are thinking 'what's going on? I did not send any message,' you can continue with your life as if nothing ever happened.<br>"
+            "The link:<br>"
         )
 
         body = f'<p>{message}</p><a href="{link}">{link}</a>'
 
         try:
-            email = EmailMessage(_("confirmation of reporting"), body, settings.FROM_EMAIL, [instance.reporter_email])
+            email = EmailMessage(_("Action Required: Please Confirm Your Contact Form Submission"), body, settings.FROM_EMAIL, [instance.reporter_email])
             email.content_subtype = "html"
             email.send()
             notifications.info(
                 self.request,
                 _(
                     "a confirmation link has been sent to your e-mail address."
-                    " your report will reach us if you follow the given link."
+                    " your message will reach us if you follow the given link."
                 ),
                 extra_tags="persistent",
             )

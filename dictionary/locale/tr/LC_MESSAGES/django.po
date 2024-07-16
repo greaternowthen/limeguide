@@ -305,7 +305,7 @@ msgid "today"
 msgstr "bugün"
 
 #: .\apps.py:53
-msgid "most recent entries"
+msgid "today's entries"
 msgstr "en son girilenler"
 
 #: .\apps.py:54 .\templatetags\functions.py:77
@@ -313,7 +313,7 @@ msgid "popular"
 msgstr "gündem"
 
 #: .\apps.py:54
-msgid "whats happening?"
+msgid "whats trending?"
 msgstr "neler olup bitiyor"
 
 #: .\apps.py:55 .\templates\dictionary\base.html:281
@@ -327,11 +327,11 @@ msgstr "kanalsız başlıklar"
 #: .\apps.py:57 .\templates\dictionary\list\entry_list.html:38
 #: .\templates\dictionary\list\entry_list.html:112
 #: .\templatetags\functions.py:84
-msgid "acquaintances"
+msgid "fave authors"
 msgstr "takip"
 
 #: .\apps.py:58
-msgid "what are users i follow up to?"
+msgid "what are my followed authors up to?"
 msgstr "takip ettiğim yazarlar ne yapmış?"
 
 #: .\apps.py:59 .\models\entry.py:31
@@ -393,11 +393,11 @@ msgid "novices"
 msgstr "çaylaklar"
 
 #: .\apps.py:69
-msgid "the entries of novice users"
+msgid "the entries of new members"
 msgstr "çömezlerin girdikleri"
 
 #: .\apps.py:71
-msgid "top"
+msgid "best"
 msgstr "en'ler"
 
 #: .\apps.py:72
@@ -2165,7 +2165,7 @@ msgid "share to facebook"
 msgstr "facebook'ta paylaş"
 
 #: .\templates\dictionary\includes\entry.html:46
-msgid "tweet this in twitter"
+msgid "share this on X"
 msgstr "twitter'da tweetle"
 
 #: .\templates\dictionary\includes\entry.html:55

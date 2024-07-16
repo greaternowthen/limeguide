@@ -134,14 +134,15 @@ class ChangePassword(LoginRequiredMixin, PasswordChangeView):
 
     def form_valid(self, form):
         message = _(
-            "dear %(username)s, your password was changed. If you aware of this"
-            " action, there is nothing to worry about. If you didn't do such"
-            " action, you can use your e-mail to recover your account."
-        ) % {"username": self.request.user.username}
+            "Dear %(username)s,<br><br>"
+            "Your password has been changed. If it's secure, great! If it’s your phone number, you might want to rethink that.<br>"
+            "If this wasn't you, recover your account using your email.<br><br><br>"
+            "© 2024 Limeguide Entertainment - All rights reserved"         
+    )  % {"username": self.request.user.username}
 
         # Send a 'your password has been changed' message to ensure security.
         try:
-            self.request.user.email_user(_("your password has been changed."), message, settings.FROM_EMAIL)
+            self.request.user.email_user(_("Your password has been changed."), message, settings.FROM_EMAIL)
         except SMTPException:
             notifications.error(self.request, _("we couldn't handle your request. try again later."))
             return super().form_invalid(form)
@@ -170,16 +171,16 @@ class TerminateAccount(LoginRequiredMixin, PasswordConfirmMixin, FormView):
 
     def form_valid(self, form):
         message = _(
-            "dear %(username)s, your account is now frozen. if you have chosen"
-            " to delete your account, it will be deleted permanently after 5 days."
-            " in case you log in before this time passes, your account will be"
-            " reactivated. if you only chose to freeze your account, you may"
-            " log in any time to reactivate your account."
+            "Dear %(username)s,<br><br>"
+            "Your account is now frozen. If you have chosen to delete your account, it will be deleted permanently after 5 days.<br>"
+            "In case you log in before this time passes, your account will be reactivated.<br>"
+            "If you only chose to freeze your account, you may log in any time to reactivate your account.<br><br><br>"
+            "© 2024 Limeguide Entertainment - All rights reserved"
         ) % {"username": self.request.user.username}
 
         # Send a message to ensure security.
         try:
-            self.request.user.email_user(_("your account is now frozen"), message, settings.FROM_EMAIL)
+            self.request.user.email_user(_("Your account is now frozen"), message, settings.FROM_EMAIL)
         except SMTPException:
             notifications.error(self.request, _("we couldn't handle your request. try again later."))
             return super().form_invalid(form)

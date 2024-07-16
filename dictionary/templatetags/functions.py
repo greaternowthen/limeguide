@@ -81,7 +81,7 @@ def print_topic_title(context):
         "following": _("activity"),
         "recent": _("entries written after me"),
         "links": _("links"),
-        "acquaintances": _("acquaintances"),
+        "acquaintances": _("fave authors"),
         "search": _("search: %(keywords)s") % {"keywords": queries.get("keywords", "")},
         "history": _("today in history: %(year)s") % {"year": queries.get("year", "")},
         "answered": _("entries with replies"),

@@ -17,9 +17,9 @@ class DictionaryConfig(AppConfig):
 
     # Settings
 
-    DOMAIN = "xyzsozluk.com"
-    PROTOCOL = "http"
-    FROM_EMAIL = "noreply@xyzsozluk.org"
+    DOMAIN = "limeguide.org"
+    PROTOCOL = "https"
+    FROM_EMAIL = "LimeGuide <hello@limeguide.org>"
 
     # Default options for content object counts
     TOPICS_PER_PAGE_DEFAULT = 50  # For guests only
@@ -53,12 +53,12 @@ class DictionaryConfig(AppConfig):
     #  <-----> START OF CATEGORY RELATED SETTINGS <----->  #
 
     NON_DB_CATEGORIES_META = {
-        "today": (_("today"), _("most recent entries")),
-        "popular": (_("popular"), _("whats happening?")),
+        "today": (_("today"), _("today's entries")),
+        "popular": (_("popular"), _("whats trending?")),
         "uncategorized": (_("uncategorized"), _("topics with no channels")),
         "acquaintances": (
-            _("acquaintances"),
-            _("what are users i follow up to?"),
+            _("fave authors"),
+            _("what are my followed authors up to?"),
             ({"entries": _("entries"), "favorites": _("favorites")}, "entries"),
         ),
         "wishes": (
@@ -69,9 +69,9 @@ class DictionaryConfig(AppConfig):
         "today-in-history": (_("today in history"), _("what has been said around this time in the past years?")),
         "drafts": (_("drafts"), _("the entries that i've yet to publish")),
         "followups": (_("followups"), _("what other authors wrote down after me?")),
-        "novices": (_("novices"), _("the entries of novice users")),
+        "novices": (_("novices"), _("the entries of new members")),
         "top": (
-            _("top"),
+            _("best"),
             _("most liked entries"),
             ({"yesterday": _("yesterday"), "week": _("last week")}, "yesterday"),
         ),
@@ -207,7 +207,7 @@ class DictionaryConfig(AppConfig):
     You may also (better) use this for debugging purposes.
     """
 
-    YEAR_RANGE = tuple(range(now.year - 1, 2018 - 1, -1))
+    YEAR_RANGE = tuple(range(now.year - 1, 2023 - 1, -1))
     """Years available for today-in-history"""
 
     #  <-----> END OF CATEGORY RELATED SETTINGS <----->  #
@@ -222,12 +222,12 @@ class DictionaryConfig(AppConfig):
     to see which users are newbies.
     """
 
-    FIRST_GENERATION_DATE = "13.08.2019"
+    FIRST_GENERATION_DATE = "10.06.2024"
     """Set this to first user's registration date. (day should be first)"""
 
     BIRTH_YEAR_RANGE = range(now.year - 18, now.year - 100, -1)
 
-    GENERATION_GAP_DAYS = 180
+    GENERATION_GAP_DAYS = 90
     """Set the interval for seperating generations."""
 
     DISABLE_ANONYMOUS_VOTING = False

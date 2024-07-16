@@ -119,8 +119,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 AUTH_USER_MODEL = "dictionary.Author"
-LANGUAGE_CODE = "tr-tr"
-TIME_ZONE = "Europe/Istanbul"
+LANGUAGE_CODE = "en-us"
+TIME_ZONE = "America/New_York"
 
 SESSION_COOKIE_AGE = 1209600
 

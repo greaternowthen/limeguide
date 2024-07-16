@@ -1,11 +1,15 @@
 {% load i18n %}
 {% url "confirm-email" token=token as confirm_url %}
 {% blocktrans trimmed with name=user.username %}
-    <h4>dear {{ name }}</h4>
-    <p>to confirm your e-mail, follow this link:</p>
+    <h4>Dear {{ name }}</h4>
+    <p>Congratulations, you're in!</p>
+    <p>One more step, please confirm your email address by clicking the link below:</p>
     <a href="{{ protocol }}://{{ domain }}{{ confirm_url }}">confirm e-mail</a>
-    <p>if you can't see or click the link, navigate to this link via the address bar:</p>
+    <p>If clicking isn't your thing, just copy and paste this link into your browser:</p>
     <p>{{ protocol }}://{{ domain }}{{ confirm_url }}</p>
-    <p>if you didn't request such thing, you don't need to worry about anything.</p>
-    <p>have a good day.</p>
+    <p>Once you're confirmed, you'll be all set to dive into Limeguide with your shiny new account.</p>
+    <p>Yours,</p>
+    <p>Team Limeguide</p>
+    <h6>© 2024 Limeguide Entertainment - All rights reserved</h6>
+
 {% endblocktrans %}

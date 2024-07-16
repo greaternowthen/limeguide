@@ -1,13 +1,13 @@
 :root {
-    --primary: #092e20;
-    --primary-dark: #0d2f18;
-    --primary-light: #16784f;
-    --primary-light-matt: #16784f;
+    --primary: #267904;
+    --primary-dark: #1a5402;
+    --primary-light: #267904;
+    --primary-light-matt: #267904;
     --light-0-invert: #242526;
-    --light-0: #fff;
+    --light-0: #f9f9f9;
     --light-1: #e3e3e3;
     --light-2: #f8f9fa;
-    --light-3: #f6f7f7;
+    --light-3: #edefee;
     --dark-0: #353535;
     --dark-1: #777;
     --text-light: #212529;
@@ -15,9 +15,9 @@
     --d-inner-dark: #3a3b3c;
     --d-inner-dark-1: #272727;
     --input-placeholder: #6c757d;
-    --body-bg: #fff;
-    --logo-big: url('/static/dictionary/img/django_logo.svg') no-repeat; /* Using absolute path. Safari says "no" when relative paths used in variables. */
-    --logo-small: url('/static/dictionary/img/django_logo_small.svg') no-repeat;
+    --body-bg: #f9f9f9;
+    --logo-big: url('https://i.imgur.com/PCUCfgd.png') no-repeat; /* Using absolute path. Safari says "no" when relative paths used in variables. */
+    --logo-small: url('https://i.imgur.com/GPF8FOf.png') no-repeat;
     --link-blank: url('data:image/svg+xml, <svg fill="%2316784f" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M11 10h1v3c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h3v1H1v10h10v-3zM6 2l2.25 2.25L5 7.5 6.5 9l3.25-3.25L12 8V2H6z"/></svg>');
     --link-image: url('data:image/svg+xml, <svg fill="%2316784f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.25 4a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h3.178L14 10.977a1.75 1.75 0 012.506-.032L22 16.44V4.25a.25.25 0 00-.25-.25H2.25zm3.496 17.5H21.75a1.75 1.75 0 001.75-1.75V4.25a1.75 1.75 0 00-1.75-1.75H2.25A1.75 1.75 0 00.5 4.25v15.5c0 .966.784 1.75 1.75 1.75h3.496zM22 19.75v-1.19l-6.555-6.554a.25.25 0 00-.358.004L7.497 20H21.75a.25.25 0 00.25-.25zM9 9.25a1.75 1.75 0 11-3.5 0 1.75 1.75 0 013.5 0zm1.5 0a3.25 3.25 0 11-6.5 0 3.25 3.25 0 016.5 0z"></path></svg>');
     --focus-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
@@ -25,24 +25,24 @@
 }
 
 body.dark {
-    --primary: rgba(43, 255, 166, .75);
-    --primary-dark: rgba(43, 255, 166, .67);
-    --primary-light: var(--primary);
-    --primary-light-matt: rgba(43, 255, 166, 1);
-    --primary-light-white-fore: rgba(43, 255, 166, .43);
+    --primary: #69AF69;
+    --primary-dark: #69AF69;
+    --primary-light: #afafaf;
+    --primary-light-matt: #69AF69;
+    --primary-light-white-fore: #69AF69;
     --light-0-invert: #fff;
-    --light-0: #242526;
-    --light-1: #272727;
+    --light-0: #353535;
+    --light-1: #282828;
     --light-2: #333;
     --light-3: var(--light-1);
     --dark-1: rgba(255, 255, 255, .75);
     --dark-0: rgba(255, 255, 255, .7);
-    --text-light: rgba(255, 255, 255, .9);
+    --text-light: #eee;
     --text-light-1: var(--dark-1);
     --input-placeholder: rgba(255, 255, 255, .5);
-    --body-bg: #18191a;
-    --logo-big: url("/static/dictionary/img/django_logo_dark.svg") no-repeat;
-    --logo-small: url('/static/dictionary/img/django_logo_small_dark.svg') no-repeat;
+    --body-bg: #353535;
+    --logo-big: url('https://i.imgur.com/xR0IO7s.png') no-repeat;
+    --logo-small: url('https://i.imgur.com/2vEkooX.png') no-repeat;
     --link-blank: url('data:image/svg+xml, <svg fill="%232bffa6" opacity=".7" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M11 10h1v3c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h3v1H1v10h10v-3zM6 2l2.25 2.25L5 7.5 6.5 9l3.25-3.25L12 8V2H6z"/></svg>');
     --link-image: url('data:image/svg+xml, <svg fill="%232bffa6" opacity=".7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.25 4a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h3.178L14 10.977a1.75 1.75 0 012.506-.032L22 16.44V4.25a.25.25 0 00-.25-.25H2.25zm3.496 17.5H21.75a1.75 1.75 0 001.75-1.75V4.25a1.75 1.75 0 00-1.75-1.75H2.25A1.75 1.75 0 00.5 4.25v15.5c0 .966.784 1.75 1.75 1.75h3.496zM22 19.75v-1.19l-6.555-6.554a.25.25 0 00-.358.004L7.497 20H21.75a.25.25 0 00.25-.25zM9 9.25a1.75 1.75 0 11-3.5 0 1.75 1.75 0 013.5 0zm1.5 0a3.25 3.25 0 11-6.5 0 3.25 3.25 0 016.5 0z"></path></svg>');
     --focus-shadow: 0 0 0 .2rem rgba(43, 255, 166, .25);
@@ -71,14 +71,17 @@ header.page_header {
 }
 
 .logo {
-    width: 120px;
+    width: 180px;
 }
 
 .logo a {
     display: block;
     background: var(--logo-big);
-    background-size: 120px 40px;
-    height: 40px;
+    background-size: 150px 50px;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 5px;
+    margin-top: 1px;
 }
 
 .top-bar {
@@ -91,7 +94,7 @@ header.page_header {
 .header-search-form {
     flex: auto;
     max-width: 550px;
-    margin: 0 1em;
+    margin: 0 4em;
 }
 
 .searchbox,
@@ -162,7 +165,7 @@ nav.sub-nav ul li {
     display: inline-block;
     text-align: center;
     flex-grow: 1;
-    border-bottom: 6px solid transparent;
+    border-bottom: 4px solid transparent;
     transition: border-bottom-color .2s ease-in;
 }
 
@@ -194,7 +197,7 @@ nav.sub-nav ul li svg {
 }
 
 .content {
-    margin-top: 94px;
+    margin-top: 120px;
     padding-top: 1.5em;
     display: flex;
 }
@@ -288,11 +291,12 @@ body.dark .tinybar {
 }
 
 .right-frame {
-    width: 250px;
+    width: 280px;
     position: -webkit-sticky;
     position: sticky;
     top: calc(94px + 1.5em);
     height: max-content;
+    margin-left: 3%;
 }
 
 .right-frame > * + footer,
@@ -448,7 +452,7 @@ section.user_entries ul.home li h2 {
 }
 
 section.user_entries ul.entries li h2 {
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 700;
     padding: 0;
     margin: 0;
@@ -530,7 +534,7 @@ footer.entry-footer > .feedback > .social > a.facebook svg:hover {
 }
 
 footer.entry-footer > .feedback > .social > a.twitter svg:hover {
-    fill: #38a1f3;
+    fill: #000000;
 }
 
 .votes > a.downvote.active svg {
@@ -1406,7 +1410,8 @@ textarea.expandable {
 
 .fs-16,
 .pw-text {
-    font-size: 16px;
+    font-size: 14px;
+    color: #738850;
 }
 
 .svg-group {
@@ -1555,7 +1560,7 @@ nav.mobile-nav > a .user-badge {
 /** MOBILE VERSION SWITCH **/
 @media (max-width: 810px) {
     .content {
-        margin-top: 90px;
+        margin-top: 110px;
         padding-top: .75em;
     }
 
@@ -1625,12 +1630,12 @@ nav.mobile-nav > a .user-badge {
 
 @media (max-width: 615px) {
     .logo {
-        width: 40px;
+        width: 70px;
     }
 
     .logo a {
         background: var(--logo-small);
-        background-size: 40px 40px;
+        background-size: 75px 50px;
     }
 
     .pagination a,

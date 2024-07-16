@@ -33,7 +33,7 @@
 
             {# <!--- logo --> #}
             <div class="logo">
-                <a aria-label="{% trans "Dictionary home page" %}" href="{% url 'home' %}"></a>
+                <a aria-label="{% trans "Dictionary home page" %}" href="{% url 'home' %}" title="don't panic. leave your legacy one entry at a time."></a>
             </div>
 
             {# Advanced search #}
@@ -153,7 +153,8 @@
                 <nav class="usermenu" aria-label="{% trans "Account Menu" %}">
                     <ul class="m-0 py-1 px-0">
                         <li><a href="{% url 'login' %}?next={% firstof request.get_full_path|urlencode '/' %}">{% trans "log in" %}</a></li>
-                        <li><a href="{% url 'register' %}">{% trans "register" %}</a></li>
+                        <li><a href="https://forms.gle/Ag1u4m4HNZ5hjM2e6">{% trans "register" %}</a></li>
+                        {# <!--- <li><a href="{% url 'register' %}">{% trans "register" %}</a></li> --> #}
                     </ul>
                 </nav>
             {% endif %}
@@ -166,8 +167,8 @@
                 {% render_header_link "today" %}
                 {% render_header_link "popular" %}
                 {% render_header_link "top" %}
-                {% render_header_link "today-in-history" %}
                 {% render_header_link "acquaintances" %}
+                {# <!-- {% render_header_link "today-in-history" %} --> #}   
 
                 {% if user.is_authenticated %}
                     <li class="key-clickable" tabindex="0" id="usermenu_mobile" data-toggle="dropdown">
@@ -242,8 +243,11 @@
                         <a href="{% url 'login' %}?next={% firstof request.get_full_path|urlencode '/' %}">{% trans "log in" %}</a>
                     </li>
                     <li>
-                        <a href="{% url 'register' %}">{% trans "register" %}</a>
+                        <a href="https://forms.gle/Ag1u4m4HNZ5hjM2e6">{% trans "register" %}</a>
                     </li>
+                    {# <!--- <li>
+                        <a href="{% url 'register' %}">{% trans "register" %}</a>
+                    </li> --> #}
                 {% endif %}
             </ul>
 
@@ -257,7 +261,7 @@
                 {% render_header_link 'followups' %}
                 {% render_header_link 'wishes' %}
                 {% render_header_link 'novices' %}
-                {% render_header_link 'today-in-history' %}
+                {# <!-- {% render_header_link "today-in-history" %} --> #}
 
                 {% for category in nav_categories|slice:":4" %}
                     <li {% if left_frame.slug == category.slug %}class="active"{% endif %} data-lf-slug="{{ category.slug }}">
@@ -315,7 +319,7 @@
 
             <footer class="body-footer">
                 <header class="d-flex align-items-start justify-content-between mb-2">
-                    <h2 class="h5 m-0">{{ request.site.name }}</h2>
+                    <h2 class="h5 m-0">are you curious?</h2>
                     <button class="btn btn-sm m-0 p-0" data-toggle="theme">
                         <svg fill="currentColor" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                             <use href="#{% if request.theme == "dark" %}sun{% else %}moon{% endif %}"></use>
@@ -326,6 +330,8 @@
                 <ul>
                     <li><a href="{% url 'general-report' %}">{% trans "contact" %}</a></li>
                     <li><a href="{% url 'announcements-index' %}">{% trans "announcements" %}</a></li>
+                    <li><a href="https://limeguide.org/faq/">frequently asked questions</a></li>
+                    <li><a href="https://limeguide.org/social-dictionary/">what is limeguide?</a></li>
                     {% for page in flatpages|order_by:"-metaflatpage__weight url" %}
                         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
